@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Leaflet Routing Machine Example</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css" />
+    <link rel="stylesheet" href="leaflet/leaflet-routing-machine.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="/stylesheets/index.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <style>
+        body {
+            padding: 5%;
+        }
+        .map {
+            position: absolute;
+            width: 80%;
+            height: 80%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <table id="myTable" class="table table-borderless order-list">
+            <thead>
+                <tr>
+                    <td>Order Number</td>
+                    <td>Address</td>
+                    <td>From</td>
+                    <td>To</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="col-sm-4">
+                        <input type="text" name="order0" class="form-control" />
+                    </td>
+                    <td class="col-sm-4">
+                        <input type="mail" name="address0"  class="form-control"/>
+                    </td>
+                    <td class="col-sm-2">
+                        <input type="time" name="from0"  class="form-control"/>
+                    </td>
+                    <td class="col-sm-2">
+                        <input type="time" name="to0"  class="form-control"/>
+                    </td>
+                    <td class="col-sm-2"><a class="deleteRow"></a>
+        
+                    </td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="5" style="text-align: left;">
+                        <input type="button" class="btn btn-lg btn-block " id="addrow" value="Add Delivery" />
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="5" style="text-align: left;">
+                        <input type="button" class="btn btn-lg btn-block " id="submit" value="Submit" />
+                    </td>
+                </tr>
+                <tr>
+
+                </tr>
+            </tfoot>
+            </table>    
+    </div>
+    <div class="cointainer-fluid">
+        <div id="map" class="map"></div>
+    </div>
+    <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"></script>
+    <script src="leaflet/leaflet-routing-machine.js"></script>
+    <script src="/javascripts/index.js"></script>
+    <script src="/javascripts/marker.js"></script>
+</body>
+</html>
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+

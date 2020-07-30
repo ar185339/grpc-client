@@ -1,0 +1,23 @@
+{
+  "name": "leaflet-routing-mapbox",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "@grpc/proto-loader": "^0.5.5",
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "ejs": "~2.6.1",
+    "express": "~4.16.1",
+    "grpc": "^1.24.3",
+    "http-errors": "~1.6.3",
+    "leaflet-routing-machine": "^3.2.12",
+    "morgan": "~1.9.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4",
+    "webpack": "^4.43.0"
+  }
+}

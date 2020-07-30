@@ -1,0 +1,35 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "io.grpc.examples.routeguide";
+option java_outer_classname = "RouteGuideProto";
+option objc_class_prefix = "RTG";
+
+package routing;
+
+service Routing {
+  rpc GetRouting(Address) returns (Route) {}
+  rpc GetDestinations(Address) returns (Destination) {}
+}
+
+message Address {
+  repeated string address = 1;
+}
+
+message Route {
+  message Result {
+    int32 vehicle_id = 1;
+    repeated int32 route = 2;
+    int32 distance = 3;
+  }
+  repeated Result result = 1;
+}
+
+message Destination {
+  message Result {
+    int32 id = 1;
+    float lat = 2;
+    float long = 3;
+  }
+  repeated Result destination = 1;
+}
