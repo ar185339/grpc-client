@@ -68,17 +68,18 @@ $(document).ready(function() {
   }
 
   const addMap = (data) => {
+    map = L.map('map');
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '© OpenStreetMap contributors'
+  }).addTo(map);
     data['result'].forEach(element => {
       prepareData(element, data['destination']);
     });
   }
 
-  col = 0
-  let map = L.map('map');
-
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      attribution: '© OpenStreetMap contributors'
-  }).addTo(map);
+  col = 0;
+  let map;
+  
     
 });
 
